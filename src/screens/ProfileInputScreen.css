@@ -12,12 +12,20 @@
 }
 
 .title {
-  font-size: 3rem;
+  /* Scales between 2rem (narrow phones) and 3rem (desktop), sized
+     relative to viewport width in between — so it shrinks to actually
+     fit on small screens instead of wrapping awkwardly. */
+  font-size: clamp(2rem, 8vw, 3rem);
   font-weight: 900;
   color: #ff4757;
   letter-spacing: 2px;
   margin-bottom: 2rem;
   text-shadow: 3px 3px 0 #000;
+  /* Gives wrapped lines enough vertical room that the text-shadow from
+     one line can't visually bleed into the line above/below it — this
+     only matters once text actually wraps, which is exactly what was
+     happening unnoticed on narrow phones. */
+  line-height: 1.15;
 }
 
 .subtitle {
