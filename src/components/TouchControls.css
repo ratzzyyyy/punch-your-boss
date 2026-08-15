@@ -1,0 +1,44 @@
+.touch-controls {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.touch-punch-button {
+  flex: 1;
+  padding: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  /* Removes the ~300ms delay some mobile browsers add while deciding if a
+     tap is the start of a double-tap-to-zoom gesture, and stops the
+     button's text from being selectable/highlighted on a long press. */
+  touch-action: manipulation;
+  user-select: none;
+}
+
+.touch-punch-button.left {
+  background: #3867d6;
+}
+
+.touch-punch-button.right {
+  background: #d63447;
+}
+
+.touch-punch-button:active {
+  transform: scale(0.95);
+}
+
+/* On narrow phone screens, make targets noticeably bigger — the whole
+   point of touch controls is tapping accurately without looking closely. */
+@media (max-width: 480px) {
+  .touch-punch-button {
+    padding: 1.75rem;
+    font-size: 1.3rem;
+  }
+}

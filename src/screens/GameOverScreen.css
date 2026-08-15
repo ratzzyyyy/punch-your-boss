@@ -1,0 +1,71 @@
+.game-over-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #1a1a2e;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  gap: 1.5rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.game-over-title {
+  font-size: 2.75rem;
+  color: #ff4757;
+  text-shadow: 3px 3px 0 #000;
+  margin: 0;
+}
+
+.results-card {
+  background: #24243e;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.result-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.result-label {
+  color: #8888aa;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.new-best-badge {
+  margin-left: 0.5rem;
+  color: #2ecc71;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.game-over-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.status-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #ff4757;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.status-button.secondary {
+  background: transparent;
+  border: 2px solid #ff4757;
+}
